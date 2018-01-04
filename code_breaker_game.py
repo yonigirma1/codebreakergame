@@ -42,6 +42,7 @@ def generate_clues(code, user_guess):
 print("Welcome Code Breaker! Let's see if you can guess my 3 digit number!")
 
 secret_code = generate_num()
+
 print("A code has been created. Please guess 3 digit number")
 
 clues_report = []
@@ -49,7 +50,7 @@ clues_report = []
 while clues_report != 'CODE CRACKED':
     guess = get_input()
 
-    generate_clues(secret_code, guess)
+    
     print("Here is the result of your guess:")
-    for clue in clues_report:
+    for clue in generate_clues(secret_code, guess):
         print(clue)
