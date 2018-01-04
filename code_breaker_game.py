@@ -7,7 +7,7 @@ def get_input():
     Ask user for a guess number to be compared with the
     generated code by the computer
     '''
-    return list(input("What is your guess"))
+    return list(input("What is your guess: "))
 
 def generate_num():
     '''
@@ -16,7 +16,7 @@ def generate_num():
     '''
     digits = [str(num) for num in range(10)]
     random.shuffle(digits)
-    return digitd[:3]
+    return digits[:3]
 
 
 def generate_clues(code, user_guess):
@@ -51,5 +51,5 @@ while clues_report != 'CODE CRACKED':
 
     generate_clues(secret_code, guess)
     print("Here is the result of your guess:")
-    for clue in clueReport:
+    for clue in clues_report:
         print(clue)
